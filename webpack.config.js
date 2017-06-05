@@ -5,7 +5,7 @@ module.exports = {
     './src/index.js'
   ],
   output: {
-    path: __dirname,
+    path: __dirname + 'public',
     publicPath: '/',
     filename: 'bundle.js'
   },
@@ -23,7 +23,7 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
-    contentBase: './'
+    contentBase: './public/'
   }, 
   plugins: [
     new BrowserSyncPlugin({

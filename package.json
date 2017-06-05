@@ -8,7 +8,9 @@
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --color --hot --inline",
     "c9": "nodemon ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --host $IP --public $C9_HOSTNAME --port $PORT",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "postinstall": "npm run tachyons",
+    "tachyons": "cp node_modules/tachyons/css/tachyons.min.css tachyons.min.css" 
   },
   "author": "",
   "license": "ISC",
@@ -39,6 +41,7 @@
     "react-router": "^2.0.1",
     "redux": "^3.0.4",
     "redux-form": "6.6.3",
-    "redux-promise": "0.5.3"
+    "redux-promise": "0.5.3",
+    "tachyons": "4.7.4"
   }
 }
